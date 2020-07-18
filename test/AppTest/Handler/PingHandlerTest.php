@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace AppTest\Handler;
 
-use App\Handler\PingHandler;
+use App\Handler\Hobbies;
 use Laminas\Diactoros\Response\JsonResponse;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
@@ -15,7 +15,7 @@ class PingHandlerTest extends TestCase
 {
     public function testResponse()
     {
-        $pingHandler = new PingHandler();
+        $pingHandler = new Hobbies();
         $response = $pingHandler->handle(
             $this->prophesize(ServerRequestInterface::class)->reveal()
         );

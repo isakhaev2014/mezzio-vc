@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\Handler\Achievemenets;
+
 /**
  * The configuration provider for the App module
  *
@@ -32,7 +34,8 @@ class ConfigProvider
     {
         return [
             'invokables' => [
-                Handler\PingHandler::class => Handler\PingHandler::class,
+                Handler\Hobbies::class => Handler\Hobbies::class,
+                Achievemenets::class => Achievemenets::class
             ],
             'factories'  => [
                 Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
